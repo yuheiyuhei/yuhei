@@ -39,8 +39,8 @@ end
 
 def update
     @mongol = Mongol.find(params[:id])
-    if mongol.update(mongol_params)
-      redirect_to :action => "show", :id => mongol.id
+    if @mongol.update(mongol_params)
+      redirect_to :action => "show", :id => @mongol.id
     else
       redirect_to :action => "new"
     end
