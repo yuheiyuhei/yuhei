@@ -1,0 +1,96 @@
+<div class="aiueo">
+	<div class="container1">
+			<%= image_tag '92E9657A-8070-4844-855C-F23CA69C65F6-37809-00000FE49F52C21F.jpg', class:'image' %>
+			<%= image_tag '8F387FEB-C442-40A5-BE5C-273D18AC8365-394-000000D3F1075C39.jpg', class:'image' %>
+			<%= image_tag 'C241096F-22FB-4BAF-81EB-CF239D4EE57B-394-000000D43F99FF99.jpg', class:'image' %>
+	</div>
+
+	<div class ="container2">
+		<div class = "container2_title">
+			<ul>お知らせ</ul>
+		</div>
+
+		<div class = "container2_message1">
+			<ul><%= link_to "comeing soon",mongols_sain1_path %></ul>
+		</div>
+
+		<div class = "container2_message2">
+			<ul><%= link_to "お知らせ一覧へ",mongols_sain1_path %></ul>
+		</div>
+	</div>
+
+	<div class="container3">
+		<div class = "container3_title">
+			<ul><%= link_to "みんなのモンゴル体験記",mongols_show_path, class:'container3_title' %></ul>
+		</div>
+
+		<div class = "container3_mon">
+			<div class = "container3_show">
+				<ul><%= link_to "体験記一覧へ", mongols_show_path %></ul>
+			</div>
+		</div>
+
+		<div class ="container3_box">
+			<% @mongols.each do |t| %>
+				<div class = "tweety">
+					<%= image_tag t.image_url, size: "250xauto" if t.image? %><br>
+					<b><%= t.name %></b><br>
+					<%= t.created_at %><br>
+					<%= t.about %>
+				</div>
+			<% end %>
+		</div>
+
+	</div>
+
+	<div class ="container4">
+		<div class= "container4_title">
+			<ul><%= link_to "観光モデルコース",mongols_khaan1_path %></ul>
+		</div>
+
+		<div class = "container4_mon">
+			<div class = "container4_show">
+			<ul><%= link_to "モデルコース一覧へ", mongols_show_path %></ul>
+			</div>
+		</div>
+
+		<div class="container4_contents">
+			<div class="container4_item">
+				<div class="container4_item_image">
+					<%= image_tag 'C241096F-22FB-4BAF-81EB-CF239D4EE57B-394-000000D43F99FF99.jpg', class:'container4_item_image' %>
+				</div>
+
+				<div class="container4_about">
+					<h3>ウランバートル市内を巡る10時間</h3><br>
+					モンゴルの首都ウランバートルにはスフバートル広場やガンダン寺など観光スポットが盛りだくさん。コンパクトな街なので1日で街の魅力を満喫できます。朝は各ホテルから市内中心部のスフバートル広場へ。
+				</div>
+			</div>
+
+			<div class="container4_item">
+				<div class="container4_item_image">
+					<%= image_tag '8F387FEB-C442-40A5-BE5C-273D18AC8365-394-000000D3F1075C39.jpg', class:'container4_item_image' %>
+				</div>
+				<p>1つめのアイテム</p>
+			</div>
+
+			<div class="container4_item">
+			<div class="container4_item_image">
+				<%= image_tag 'C241096F-22FB-4BAF-81EB-CF239D4EE57B-394-000000D43F99FF99.jpg', class:'container4_item_image' %>
+			</div>
+			<p>1つめのアイテム</p>
+		</div>
+		</div>
+	</div>
+
+	<div class ="container5">
+		<div class = "container5_title">
+			<ul><%= link_to "在モンゴル日本人向け情報",mongols_ger7_path %></ul>
+		</div>
+	</div>
+	
+	<div class ="container6">
+		<div class = "container6_title">
+			<ul><%= link_to "モンゴル写真集",mongols_sain4_path %></ul>
+		</div>
+	</div>
+</div>

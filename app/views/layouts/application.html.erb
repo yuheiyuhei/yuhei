@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>モンゴル情報サイト</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <header>
+    <div class="title">
+      <div class = "title1">
+        <h5>モンゴル情報サイト</h5>
+      </div>
+
+      <div class ="title2">
+        <h2>モンゴルゴル<link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet"></h2>
+      </div>
+    </div>
+
+    <ul class="drop_menu">    
+      <!---   ここから1列目      --->
+      <li>
+      <a href="/mongols">ホーム</a>
+      </li>
+
+      <!---       ここまで2列目      --->
+      <li>
+        <a href="#">知る</a>
+        <ul class="child_menu">
+        <li><%= link_to'お知らせ',mongols_sain1_path %></li>
+        <li><%= link_to'モンゴル国について',mongols_sain2_path %></li>
+        <li><%= link_to'モンゴルの魅力',mongols_sain3_path %></li>
+        <li><%= link_to'モンゴル写真集',mongols_sain4_path %></li>
+        </ul>
+      </li>
+
+      <!---       ここまで3列目      --->
+      <li>
+        <a href="#">楽しむ</a>
+        <ul class="child_menu">
+          <li><%= link_to'観光モデルコース',mongols_khaan1_path %></li>
+          <li><%= link_to'首都ウランバートル',mongols_khaan2_path %></li>
+          <li><%= link_to'モンゴル東部',mongols_khaan3_path %></li>
+          <li><%= link_to'モンゴル南部',mongols_khaan4_path %></li>
+          <li><%= link_to'モンゴル西部',mongols_khaan5_path %></li>
+          <li><%= link_to'モンゴル北部',mongols_khaan6_path %></li>
+        </ul>
+      </li>
+
+      <!---       ここまで4列目      --->
+      <li>
+        <a href="#">目的から探す</a>
+        <ul class="child_menu">
+          <li><%= link_to'観る',mongols_mori1_path %></li>
+          <li><%= link_to'食べる',mongols_mori2_path %></li>
+          <li><%= link_to'遊ぶ',mongols_mori3_path %></li>
+          <li><%= link_to'買う',mongols_mori4_path %></li>
+          <li><%= link_to'泊まる',mongols_mori5_path %></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">お役立ち情報</a>
+        <ul class="child_menu">
+          <li><%= link_to'モンゴル体験記',mongols_show_path %></li>
+          <li><%= link_to'観光案内所',mongols_ger2_path %></li>
+          <li><%= link_to'両替・ATM',mongols_ger3_path %></li>
+          <li><%= link_to'Wi-Fi情報',mongols_ger4_path %></li>
+          <li><%= link_to'緊急時連絡先',mongols_ger5_path %></li>
+          <li><%= link_to'観光マナーとルール',mongols_ger6_path %></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">交通機関</a>
+        <ul class="child_menu">
+          <li><%= link_to'空港アクセス',mongols_nar1_path %></li>
+          <li><%= link_to'ウランバートル市内',mongols_nar2_path %></li>
+          <li><%= link_to'都市間交通',mongols_nar3_path %></li>
+          <li><%= link_to'モンゴル縦貫鉄道',mongols_nar4_path %></li>
+      </li>
+      </ul>
+
+      <li>
+      <%= link_to "ログイン",new_user_session_path %>
+      </li>
+
+    </nav>
+    </header>
+
+
+    <main>
+    <%= yield %>
+    </main>
+
+    <footer>
+      <div class="foot-wrap">
+          <div class="menu-1">
+              <h3>知る</h3>
+              <ul class="foot-1">
+                <li><%= link_to'お知らせ一覧',mongols_sain1_path %></li>
+                <li><%= link_to'モンゴル国について',mongols_sain2_path %></li>
+                <li><%= link_to'モンゴルの魅力',mongols_sain3_path %></li>
+                <li><%= link_to'モンゴル写真集',mongols_sain4_path %></li>
+              </ul>
+          </div>
+
+          <div class="menu-2">
+              <h3>楽しむ</h3>
+              <ul class="foot-2">
+                <li><%= link_to'観光モデルコース',mongols_khaan1_path %></li>
+                <li><%= link_to'首都ウランバートル',mongols_khaan2_path %></li>
+                <li><%= link_to'モンゴル東部',mongols_khaan3_path %></li>
+                <li><%= link_to'モンゴル南部',mongols_khaan4_path %></li>
+                <li><%= link_to'モンゴル西部',mongols_khaan5_path %></li>
+                <li><%= link_to'モンゴル北部',mongols_khaan6_path %></li>
+              </ul>
+          </div>
+
+          <div class="menu-3">
+              <h3>目的から探す</h3>
+              <ul class="foot-3">
+                <li><%= link_to'観る',mongols_mori1_path %></li>
+                <li><%= link_to'食べる',mongols_mori2_path %></li>
+                <li><%= link_to'遊ぶ',mongols_mori3_path %></li>
+                <li><%= link_to'買う',mongols_mori4_path %></li>
+                <li><%= link_to'泊まる',mongols_mori5_path %></li>
+              </ul>
+          </div>
+
+          <div class="menu-4">
+              <h3>お役立ち情報</h3>
+              <ul class="foot-4">
+                <li><%= link_to'モンゴル体験記',mongols_show_path %></li>
+                <li><%= link_to'観光案内所',mongols_ger2_path %></li>
+                <li><%= link_to'両替・ATM',mongols_ger3_path %></li>
+                <li><%= link_to'Wi-Fi情報',mongols_ger4_path %></li>
+                <li><%= link_to'緊急時連絡先',mongols_ger5_path %></li>
+                <li><%= link_to'観光マナーとルール',mongols_ger6_path %></li>
+              </ul>
+          </div>
+
+          <div class="menu-5">
+              <h3>交通機関</h3>
+              <ul class="foot-5">
+              <li><%= link_to'空港アクセス',mongols_nar1_path %></li>
+              <li><%= link_to'ウランバートル市内',mongols_nar2_path %></li>
+              <li><%= link_to'都市間交通',mongols_nar3_path %></li>
+              <li><%= link_to'モンゴル縦貫鉄道',mongols_nar4_path %></li>
+              </ul>
+          </div>
+
+          <small class="cmark">©️copyright 2023
+              <a href="#">Mongolgol.</a>
+          </small>
+      </div>
+    </footer>
+  </body>
+</html>

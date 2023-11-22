@@ -1,0 +1,20 @@
+<div class="tweets_container">
+<h3>体験記詳細</h3>
+
+<div class="content_main">
+  <article class="article">
+    <figure>
+      <%= image_tag @mongol.image_url, size: "400xauto" if @mongol.image? %>
+    </figure>
+
+    <div class"post">
+      <h1><%= @mongol.name %></h1>
+      <br><%= @mongol.about %>
+      <br><%= @mongol.created_at %>
+    </div>
+  </article>
+</div>
+
+<%= link_to "投稿を編集", edit_mongol_path(@mongol.id) %>
+<%= button_to "削除する", mongol_path(@mongol.id), method: :delete %>
+<%= link_to "体験記一覧に戻る", mongols_show_path %>

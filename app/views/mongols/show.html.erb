@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag 'index', :media => "all" %>
+<div class = "tweets_container">
+
+  <div class="tweets_container_title">
+  <h3>体験記一覧</h3>
+  <h4><%= link_to "新規投稿へ",mongols_new_path %></h4>
+    
+    <div id="content_main">
+      <% @mongols.each do |t| %>
+        <article class="article">
+            <figure>
+              <%= image_tag t.image_url, size: "250x200" if t.image? %>
+            </figure>
+
+            <div class="article-info">
+              <h1><%= t.name %></h1>
+              <time class="article-date"><%= t.created_at %></time>
+              <br><%= t.about %>
+              <br><%= link_to "投稿詳細へ", mongol_path(t.id) %>
+            </div>
+
+        </article>
+      <% end %>
+    </div>
+
+    <%= link_to "ホームに戻る", mongols_path %>
+  </div>
+  
+</div>

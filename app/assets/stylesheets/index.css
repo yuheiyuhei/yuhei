@@ -1,0 +1,368 @@
+.aiueo{
+height: auto;
+}
+
+/* ここからトップ画像 container1 */
+.container1{
+    width: 100vw;
+    height: 900px;
+    padding: auto;
+}
+
+.image {
+    position: absolute;
+    opacity: 0;
+    animation: change-img-anim 30s infinite;
+    width : 100vw ;
+    object-fit: contain;
+}
+
+.image:nth-of-type(1) {
+    animation: change-img-anim-first 30s infinite;
+    animation-delay: 0s;
+}
+.image:nth-of-type(2) {
+    animation-delay: 10s;
+}
+.image:nth-of-type(3) {
+    animation-delay: 20s;
+}
+
+@keyframes change-img-anim-first {
+    0%{ opacity: 0;}
+    30%{ opacity: 1;}
+    36%{ opacity: 1;}
+    45%{ opacity: 0;}
+    100%{ opacity: 0;}
+}
+
+@keyframes change-img-anim {
+    0%{ opacity: 0;}
+    30%{ opacity: 1;}
+    36%{ opacity: 1;}
+    45%{ opacity: 0;}
+    100%{ opacity: 0;}
+}
+
+/* container2 */
+.container2{
+    width: 100vw;
+    height: 80px;
+    margin: 0%;
+    padding: auto;
+    background: #FFFAF0;
+    font: 16px sans-serif;
+    color: rgb(3, 3, 3);
+    outline: 3px solid rgb(255, 255, 255);
+    outline-offset: -7px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 3fr 1fr;
+} 
+
+.container2 ul{
+    margin: 16px auto;
+    text-align: center;
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
+    font-size: 150%;
+}
+
+.container2_title ul{
+    color: #8B4513;
+    font-weight: bold; /*太字に*/
+}
+
+.container2_title ul a{
+    text-decoration: none;
+    left: 50%;
+    justify-content: center
+    
+}
+
+.container2_message1  ul a{ 
+    text-decoration: none;
+    color: #8B4513;
+    font-weight: bold; /*太字に*/
+}
+
+.container2_message2 ul a{ 
+    border-radius: 10px;
+    text-decoration: none;
+    color: #006400;
+    padding: 1rem 1rem;
+    border: 2px solid #006400;
+    font-size: small;
+}
+
+/* container3 */
+.container3{
+    width: 100vw;
+    height: 540px;
+    margin: 0%;
+    padding: auto;
+    background: #D2B48C;
+    font: 16px sans-serif;
+    color: rgb(3, 3, 3);
+    outline: 3px solid rgb(255, 255, 255);
+    outline-offset: -7px;
+    
+}
+
+.container3_title{
+    text-align:center;
+    color: black;
+    text-decoration: none;
+}
+
+.container3_title ul{
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
+    font-size: 150%;
+    font-weight: bold; /*太字に*/
+    position: relative;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.container3_title ul:before {
+    position: absolute;
+    bottom: 11px;
+    left: calc(50% - 40px);
+    width: 70px;
+    height: 5px;
+    content: '';
+    border-radius: 3px;
+    background: #000;
+}
+
+.container3_mon{
+    text-align: right;
+    padding-bottom: 3px;
+}
+
+.container3_show ul a{ 
+    border-radius: 10px;
+    text-decoration: none;
+    color: #006400;
+    padding: 1rem 1rem;
+    border: 2px solid #006400;
+    font-size: small;
+    margin-right: 5%;
+}
+
+.container3_box{
+    width: 1200px;
+    height: 75%;
+    background-color: #D2B48C;
+    /* 水平・垂直方向の中央揃え */
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+}
+
+.tweety{
+    text-overflow: ellipsis;
+    background-color: white;
+    border: solid #8B0000;
+    width: 33%;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    border-radius:10px;
+    margin: 3px;
+    padding: 3px;
+}
+
+.tweety img{
+    width: 380px;
+    height: 230px;
+    border: 2px solid white;
+    background: white;
+    border-radius:10px;
+    margin: auto;
+    display: block;
+}
+
+/* container4 */
+.container4{
+    width: 100vw;
+    height: 500px;
+    margin: 0%;
+    padding: auto;
+    background: #FFEBCD;
+    font: 16px sans-serif;
+    color: rgb(3, 3, 3);
+    outline: 3px solid rgb(255, 255, 255);
+    outline-offset: -7px;
+}
+
+.container4_title{
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
+    font-size: 150%;
+    font-weight: bold; /*太字に*/
+    position: relative;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.container4_title :before {
+    position: absolute;
+    bottom: 11px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 5px;
+    content: '';
+    border-radius: 3px;
+    background: #000; 
+}
+
+.container4_title a{
+    text-align:center;
+    color: black;
+    text-decoration: none;
+}
+
+.container4_show ul a{ 
+    border-radius: 10px;
+    text-decoration: none;
+    color: #006400;
+    padding: 1rem 1rem;
+    border: 2px solid #006400;
+    font-size: small;
+    margin-right: 5%;
+}
+
+.container4_mon{
+    text-align: right;
+    padding-bottom: 3px;
+}
+
+.container4_contents {
+    display: flex;
+    width: 90vw;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-around;
+}
+
+.container4_item {
+    width: calc(100% / 3);
+    text-align: center;
+    border: solid 1px #fff;
+    text-align: center;
+    line-height: 150px;
+    width: 90vw;
+    height: 350px;
+    background-color: white;
+    border: solid #8B0000;
+    justify-content: space-between;
+    border-radius:10px;
+    margin: 3px;
+    padding: 3px;
+}
+
+.container4_item_image {
+    width: 380px;
+    height: 230px;
+    border: 2px solid white;
+    background: white;
+    border-radius:10px;
+    margin: auto;
+    display: block;
+}
+
+.container4_about {
+    height: 100px;
+    width: 350px;
+    line-height: 150%;
+    text-align: left;
+    overflow: hidden;  /* はみ出た部分を隠す */
+	white-space: nowrap; /* 改行が行われないようにする */
+	text-overflow: ellipsis; /* 省略されていることを「・・・」で表示する */
+}
+
+.container4_about h3 {
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+.container5{
+width: 100vw;
+height: 500px;
+margin: 0%;
+padding: auto;
+background: #FFFAF0;
+font: 16px sans-serif;
+color: rgb(3, 3, 3);
+outline: 3px solid rgb(255, 255, 255);
+outline-offset: -7px;
+}
+
+.container5_title{
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
+    font-size: 150%;
+    font-weight: bold; /*太字に*/
+    position: relative;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.container5_title :before {
+    position: absolute;
+    bottom: 11px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 5px;
+    content: '';
+    border-radius: 3px;
+    background: #000; 
+}
+
+.container5_title a{
+    text-align:center;
+    color: black;
+    text-decoration: none;
+}
+
+.container6{
+    width: 100vw;
+    height: 500px;
+    margin: 0%;
+    padding: auto;
+    background: #DCDCDC;
+    font: 16px sans-serif;
+    color: rgb(3, 3, 3);
+    outline: 3px solid rgb(255, 255, 255);
+    outline-offset: -7px;
+}
+
+.container6_title{
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
+    font-size: 150%;
+    font-weight: bold; /*太字に*/
+    position: relative;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.container6_title :before {
+    position: absolute;
+    bottom: 11px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 5px;
+    content: '';
+    border-radius: 3px;
+    background: #000; 
+}
+
+.container6_title a{
+    text-align:center;
+    color: black;
+    text-decoration: none;
+}

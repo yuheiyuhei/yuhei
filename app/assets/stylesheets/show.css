@@ -1,0 +1,103 @@
+.tweets_container{
+    width: 100vw;
+    height: 1700px;
+    margin: 0%;
+    padding: auto;
+    background: #D2B48C;
+    font: 16px sans-serif;
+    color: rgb(3, 3, 3);
+    outline: 3px solid rgb(255, 255, 255);
+    outline-offset: -7px;
+}
+
+.tweets_container a{
+    text-decoration: none;
+    color: #000;
+}
+
+.tweets_container_title {
+    width: 90vw;
+    margin: auto;
+    height: 1600px;
+	margin-top: 0px;
+    background: #D2B48C;
+}
+
+.tweets_container_title  h3 {
+    margin: 30px auto;
+    text-align: center;
+    position: relative;
+    padding: 1.5rem;
+    font-size: 150%;
+    
+}
+
+.tweets_container_title h3:before {
+    position: absolute;
+    bottom: 11px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 5px;
+    content: '';
+    border-radius: 3px;
+    background: #000;
+}
+
+#content_main .article {
+	height: 250px;
+	margin-top: 20px;
+    background: white;
+}
+
+#content_main .article figure {
+	float: left; 
+	height: 250px;
+	width: auto; 
+	margin: 0;
+    background: #D2B48C;
+}
+
+#content_main .article figure img {
+	border-radius: 5px;
+	height: 250px;
+	width: 250px;
+}
+
+.article-info {
+	display: inline-block;
+    background: green;
+    height: 220px;
+    width: 900px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-moz-text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+}
+
+.article-info h1 {
+	margin-top: 0px;
+	margin-bottom: 1.2rem;
+}
+
+.article-info a {
+    text-decoration: none;
+    color: black;
+}
+
+#content_main .article-category {
+	background-color: #FFF687;
+	border-radius: 15px;
+	color: #000000;
+	padding: 5px 8px 5px 8px;
+}
+
+#content_main .article-date {
+	color: black;
+	margin-left: 1rem;
+}
+
+.article-info p {
+	color: black;
+
+}

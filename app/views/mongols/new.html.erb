@@ -1,0 +1,33 @@
+<div class="tweets_container-new">
+  <h3>新規投稿ページ</h3>
+  <%= form_for @mongol do |f| %>
+
+    <div class= 'taikenn'>
+
+      <br>
+      <div class="title">
+      <b><%= f.label :タイトル %></b><br>
+      <%= f.text_field :name, :size => 100 %> 
+      </div>
+
+      <br>
+      <div class="naiyou">
+      <b><%= f.label :内容 %></b><br>
+      <%= f.text_field :about, :size => 140 %>
+      </div>
+
+      <br>
+      <div class="field">
+        <b><%= f.label :image %></b>
+        <%= f.file_field :image %>
+      </div>
+
+    <br><%= f.submit "投稿する" %>
+  <% end %>
+  
+  <br>
+  <div class="bottom">
+    <b><%= link_to "ホームに戻る", mongols_path %><br></b>
+    <b><%= link_to "投稿一覧に戻る", mongols_show_path %></b>
+  </div>
+</div>

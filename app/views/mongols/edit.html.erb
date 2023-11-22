@@ -1,0 +1,36 @@
+<div class="tweets_container">
+<h3>投稿を編集</h3>
+<%= form_for @mongol do |f| %>
+
+<div class= 'taikenn'>
+<br>
+<div class="title">
+<b><%= f.label :タイトル %></b><br>
+<%= f.text_field :name, :size => 100 %> 
+</div>
+
+
+<br>
+<div class="naiyou">
+<b><%= f.label :内容 %></b><br>
+<%= f.text_area :about, :size => 140 %>
+</div>
+
+
+<br>
+<div class="field">
+<b><%= f.label :image %></b>
+<%= f.file_field :image %>
+</div>
+
+
+    <%= f.submit "編集する" %>
+
+</div>
+
+<% end %>
+
+<%= link_to "詳細ページに戻る", mongols_detail_path %>
+<%= link_to "名所一覧に戻る", mongols_show_path %>
+
+</div>
