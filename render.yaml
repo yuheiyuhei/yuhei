@@ -1,0 +1,22 @@
+databases:
+  - name: mongolgol_DB
+    databaseName: mongolgol_db
+    user: mongolgol
+    region: singapore
+
+services:
+  - type: web
+    name: mongolgol
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: mongolgol_DB
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+
